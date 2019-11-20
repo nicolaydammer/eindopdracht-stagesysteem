@@ -1,0 +1,29 @@
+Voordat je begint met dingen aanpassen doe dit:
+
+git pull
+
+dit zorgt er voor dat je alle laatste aanpassingen hebt.
+
+als je klaar bent met wat je wil doen doe je dit:
+
+open de root folder van het project
+rechtermuis klik en open git bash.
+
+voeg alleen de files to die je aangepast hebt, dit doe je bijvoorbeeld met:
+
+voor een enkele file:
+
+git add documentatie/hoe\ upload\ je\ veranderingen.txt
+
+voor een complete folder:
+
+git add documentatie
+
+
+vervolgens commit je de verandering met een bericht:
+
+git commit -m "hier de beschrijving van de verandering"
+
+en daarna push je het naar github met
+
+git push origin master
