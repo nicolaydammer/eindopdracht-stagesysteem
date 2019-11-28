@@ -27,5 +27,3 @@ git commit -m "hier de beschrijving van de verandering"
 en daarna push je het naar github met
 
 git push origin master
-
-test
