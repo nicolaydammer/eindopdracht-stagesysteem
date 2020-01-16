@@ -17,6 +17,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res/layouts/bedrijven',
+                            'src/main/res/layouts/stagecoordinatoren',
+                            'src/main/res/layouts/docenten',
+                            'src/main/res/layouts/studenten',
+                            'src/main/res/layouts',
+                            'src/main/res'
+                    ]
+        }
+    }
 }
 
 dependencies {
