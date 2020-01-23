@@ -3,7 +3,10 @@ package com.example.stagesysteem;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 
@@ -13,6 +16,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+
+        //login class
+        final Person person = new Person();
+        //eventlistener
+        findViewById(R.id.loginBtn).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        EditText email = findViewById(R.id.emailField);
+                        EditText password = findViewById(R.id.passwordField);
+                        person.login(email.getText().toString(), password.getText().toString());
+                    }
+                }
+        );
 
         /*Spinner radius = findViewById(R.id.kilometers);
         String[] kilometers = new String[]{"5 km", "15 km", "25 km", "40 km", "50 km"};
