@@ -1,6 +1,7 @@
 package com.example.stagesysteem;
 
 import androidx.annotation.ContentView;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,6 +15,7 @@ import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
+    final Spinners spinner = new Spinners();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         //login class
         //final Person person = new Person();
-        final Spinners spinner = new Spinners();
+
         //eventlistener
 /*        findViewById(R.id.loginBtn).setOnClickListener(
                 new View.OnClickListener() {
@@ -33,10 +35,17 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         ); */
-        Spinner s = findViewById(R.id.kilometers);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        Spinner s = findViewById(R.id.sp_km_student);
         String[] test = new String[]{"10 km", "15 km", "20 km"};
         spinner.createSpinner(test, s);
 
-
     }
+
+
 }

@@ -195,7 +195,7 @@
     </ScrollView>
 
     <Spinner
-        android:id="@+id/kilometers"
+        android:id="@+id/sp_km_student"
         android:layout_width="117dp"
         android:layout_height="24dp"
         app:layout_constraintBottom_toBottomOf="@+id/stad"
