@@ -1,15 +1,18 @@
 import React from 'react';
 import logo from './images/logo.png';
+import Button from 'react-bootstrap/Button';
 import './App.css';
+import Login from './Auth/Login';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <h2>
           StageSyteem
-        </p>
+        </h2>
       </header>
 
       <body className="App-body"> 
@@ -17,23 +20,10 @@ function App() {
      <br></br>
      <br></br>
      
-     <form>
-        <label>
-         Email
-         <br></br>
-         <input type="text" name="name" />
-        </label>
-        <br></br>
-        <br></br>
-        <label>
-         Password 
-         <br></br>
-         <input type="text" name="name" />
-        </label>
-        <br></br>
-        <br></br>
-        <input className="submit" type="submit" value="Login"/>
-      </form>
+     
+        {/* <Button variant="primary" size="lg"><a href="./home.js" target="_blank">Login</a></Button>
+        <p color="link" className="px-0">Forgot password?</p> */}
+      <Login />
     </body>
     </div>
   
