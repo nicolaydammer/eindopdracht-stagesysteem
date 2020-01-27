@@ -1,30 +1,42 @@
 package com.example.stagesysteem;
 
+import androidx.annotation.ContentView;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.hoofdpagina_student);
 
-        Spinner radius = findViewById(R.id.kilometers);
-        String[] kilometers = new String[]{"5 km", "15 km", "25 km", "40 km", "50 km"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, kilometers);
-//        radius.setAdapter(adapter);
+        //login class
+        //final Person person = new Person();
+        final Spinners spinner = new Spinners();
+        //eventlistener
+/*        findViewById(R.id.loginBtn).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        EditText email = findViewById(R.id.emailField);
+                        EditText password = findViewById(R.id.passwordField);
+                        person.login(email.getText().toString(), password.getText().toString());
+                    }
+                }
+        ); */
+        Spinner s = findViewById(R.id.kilometers);
+        String[] test = new String[]{"10 km", "15 km", "20 km"};
+        spinner.createSpinner(test, s);
+
 
     }
 }
